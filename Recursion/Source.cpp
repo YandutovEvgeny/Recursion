@@ -1,16 +1,16 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 void elevator(int floor)
 {
-	if (floor == 0) //Условие выхода из рекурсии
+	if (floor == 0) //РЈСЃР»РѕРІРёРµ РІС‹С…РѕРґР° РёР· СЂРµРєСѓСЂСЃРёРё
 	{
-		cout << "Вы в подвале" << endl;
+		cout << "Р’С‹ РІ РїРѕРґРІР°Р»Рµ" << endl;
 		return;
 	}
 	cout << floor << endl;
-	elevator(floor - 1);   //<- Рекурсия
-	cout << floor << endl; //<- Рекурсивный возврат
+	elevator(floor - 1);   //<- Р РµРєСѓСЂСЃРёСЏ
+	cout << floor << endl; //<- Р РµРєСѓСЂСЃРёРІРЅС‹Р№ РІРѕР·РІСЂР°С‚
 }
 
 void main()
@@ -20,6 +20,6 @@ void main()
 	main()*/
 	
 	int floor;
-	cout << "Введите номер этажа: "; cin >> floor;
+	cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ СЌС‚Р°Р¶Р°: "; cin >> floor;
 	elevator(floor);
 }
