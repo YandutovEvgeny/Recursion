@@ -13,13 +13,16 @@ void elevator(int floor)
 	cout << floor << endl; //<- Рекурсивный возврат
 }
 
+
 void main()
 {
 	setlocale(LC_ALL, "Russian");
 	/*cout << "Hello World";
-	main()*/
-	
+	main();*/
+
 	int floor;
 	cout << "Введите номер этажа: "; cin >> floor;
 	elevator(floor);
 }
+	
+
