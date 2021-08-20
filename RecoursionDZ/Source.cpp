@@ -1,6 +1,8 @@
-#include<iostream>
+Ôªø#include<iostream>
 using namespace std;
-
+using std::cin;
+using std::cout;
+using std::endl;
 
 int Factorial(int number)
 {
@@ -8,6 +10,7 @@ int Factorial(int number)
 	else if (number == 1) return 1;
 	else return number * Factorial(number - 1);
 }
+
 int Power(long long number1, long long degree)
 {
 	if (degree < 0)return -1;
@@ -15,8 +18,10 @@ int Power(long long number1, long long degree)
 	else if (degree == 1)return number1;
 	else return number1 * Power(number1, degree - 1);
 }
-unsigned int Fibonacci(unsigned int n)
+
+int Fibonacci(unsigned int n)
 {
+	unsigned int row_before_number;
 	return n < 2 ? n : Fibonacci(n - 2) + Fibonacci(n - 1);
 	
 }
@@ -26,24 +31,29 @@ void main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	//‘‡ÍÚÓË‡Î
+	//–§–∞–∫—Ç–æ—Ä–∏–∞–ª
 	int number;
-	cout << "¬‚Â‰ËÚÂ ˜ËÒÎÓ: "; cin >> number;
-	cout << "‘‡ÍÚÓË‡Î ˜ËÒÎ‡ " << number << "! = " << Factorial(number) << endl;
+	cout << "–í–≤–µ–¥–∏—Ç–µ —á–∏—Å–ª–æ: "; cin >> number;
+	cout << "–§–∞–∫—Ç–æ—Ä–∏–∞–ª —á–∏—Å–ª–∞ " << number << "! = " << Factorial(number) << endl;
 	
-	//¬ÓÁ‚Â‰ÂÌËÂ ‚ ÒÚÂÔÂÌ¸
+	//–í–æ–∑–≤–µ–¥–µ–Ω–∏–µ –≤ —Å—Ç–µ–ø–µ–Ω—å
 	long long number1;
 	long long degree;
-	cout << "◊ËÒÎÓ, ÍÓÚÓÓÂ ‚˚ ıÓÚËÚÂ ‚ÓÁ‚ÂÒÚË ‚ ÒÚÂÔÂÌ¸: "; cin >> number1;
-	cout << "◊ËÒÎÓ, ÍÓÚÓÓÂ ‚ÓÁ‚Ó‰ËÚ ‚ ÒÚÂÔÂÌ¸: "; cin >> degree;
-	cout << "◊ËÒÎÓ " << number1 << " ‚ ÒÚÂÔÂÌË " << degree << " = " << Power(number1, degree) << endl;
+	cout << "–ß–∏—Å–ª–æ, –∫–æ—Ç–æ—Ä–æ–µ –≤—ã —Ö–æ—Ç–∏—Ç–µ –≤–æ–∑–≤–µ—Å—Ç–∏ –≤ —Å—Ç–µ–ø–µ–Ω—å: "; cin >> number1;
+	cout << "–ß–∏—Å–ª–æ, –∫–æ—Ç–æ—Ä–æ–µ –≤–æ–∑–≤–æ–¥–∏—Ç –≤ —Å—Ç–µ–ø–µ–Ω—å: "; cin >> degree;
+	cout << "–ß–∏—Å–ª–æ " << number1 << " –≤ —Å—Ç–µ–ø–µ–Ω–∏ " << degree << " = " << Power(number1, degree) << endl;
 	
-	unsigned int N;
-	cout << "¬‚Â‰ËÚÂ ÔÓˇ‰ÍÓ‚ÓÂ ˜ËÒÎÓ ‰Ó ÍÓÚÓÓ„Ó ıÓÚËÚÂ ‚˚‚ÂÒÚË ˇ‰ ‘Ë·ÓÌ‡˜˜Ë: "; cin >> N;
-	for (int i = 0; i < N; i++)
+	//–í—ã–≤–æ–¥ —Ä—è–¥–∞ –§–∏–±–æ–Ω–∞—á—á–∏ –¥–æ —É–∫–∞–∑–∞–Ω–Ω–æ–≥–æ —á–∏—Å–ª–∞
+	int row_before_number;
+	cout << "–í–≤–µ–¥–∏—Ç–µ —á–∏—Å–ª–æ –¥–æ –∫–æ—Ç–æ—Ä–æ–≥–æ —Ö–æ—Ç–∏—Ç–µ —É–≤–∏–¥–µ—Ç—å —Ä—è–¥ –§–∏–±–æ–Ω–∞—á—á–∏: "; cin >> row_before_number;
+	
+	
+	//–í—ã–≤–æ–¥ –æ–ø—Ä–µ–¥–µ–ª—ë–Ω–Ω–æ–≥–æ –∫–æ–ª–∏—á–µ—Å—Ç–≤–∞ –∑–Ω–∞—á–µ–Ω–∏–π –∏–∑ —Ä—è–¥–∞ –§–∏–±–æ–Ω–∞—á—á–∏
+	unsigned int quantity_of_elements;
+	cout << "–í–≤–µ–¥–∏—Ç–µ –∫–æ–ª–∏—á–µ—Å—Ç–≤–æ –∑–Ω–∞—á–µ–Ω–∏–π –∏–∑ —Ä—è–¥–∞ –§–∏–±–æ–Ω–∞—á—á–∏: "; cin >> quantity_of_elements;
+	for (int i = 0; i < quantity_of_elements; i++)
 	{
 		cout << Fibonacci(i) << " ";
 	}
-	
 }
 
