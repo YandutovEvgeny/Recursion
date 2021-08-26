@@ -43,7 +43,7 @@ void Fibonacci(int n/*, int a = 0, int b = 1*/)
 	/*a = b;
 	b = c;
 	c = a + b;*/
-	c = (a += b) + (b += c);
+	c = (a = b) + (b = c);
 	Fibonacci(n/*, b, a + b*/);
 }
 
